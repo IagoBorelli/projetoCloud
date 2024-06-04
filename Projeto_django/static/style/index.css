@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3c3c3c;
+}
+
+.navbar { 
+    background-color: black;
+}
+
+.nav-item a {
+    color: #D9954C;
+}
+.containerBanner {
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.containerProdutos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 1%;
+}
+
+.hamburguerImage img{
+    width: 300px;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+}
+
+.hamburgerDescricao {
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hamburgerDescricao p {
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+.hamburgerDescricao span {
+    color: green;
+    font-weight: 800;
+}
+
+.hamburgerDescricao button {
+    margin-top: -1rem;
+    background-color: #D9954C;
+    border: none;
+    height: 40px;
+    color: white;
+    text-shadow: 3px 3px 3px #3c3c3c;
+}
+
+.hamburgerDescricao button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #3c3c3c;
+}
