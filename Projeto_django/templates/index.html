@@ -58,53 +58,46 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="">
-                                <form>
-                                    <div class="row mb-3">
-                                      <label for="inputEmail3" class="form-label">Hambúrger</label>
-                                      <div class="col-sm-10">
-                                        <select name="" id="" class="form-control">
-                                            <option value="" selected>Bacon Burguer</option>
+                            <form action="{% url 'index' %}" method="post">
+                                {% csrf_token %}
+                                <div class="row mb-3">
+                                    <label for="hamburger1" class="form-label">Hambúrger</label>
+                                    <div class="col-sm-10">
+                                        <select name="hamburger" id="hamburger1" class="form-control">
+                                            <option value="Bacon Burguer" selected>Bacon Burguer</option>
                                         </select>
-                                      </div>
                                     </div>
-                                    <div class="row mb-3">
-                                      <label for="inputEmail3" class="form-label">Endereço</label>
-                                      <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                      </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="endereco1" class="form-label">Endereço</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="endereco" id="endereco1" class="form-control">
                                     </div>
-                                    <div class="row mb-3">
-                                      <label for="inputPassword3" class="form-label">Complemento</label>
-                                      <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                      </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="complemento1" class="form-label">Complemento</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="complemento" id="complemento1" class="form-control">
                                     </div>
-                                    <fieldset class="row mb-3">
-                                      <legend class="form-label">Forma de pagamento</legend>
-                                      <div class="col-sm-10">
+                                </div>
+                                <fieldset class="row mb-3">
+                                    <legend class="form-label">Forma de pagamento</legend>
+                                    <div class="col-sm-10">
                                         <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                          <label class="form-check-label" for="gridRadios1">
-                                            Dinheiro
-                                          </label>
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="dinheiro1" value="Dinheiro" checked>
+                                            <label class="form-check-label" for="dinheiro1">Dinheiro</label>
                                         </div>
                                         <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                          <label class="form-check-label" for="gridRadios2">
-                                            PIX
-                                          </label>
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="pix1" value="PIX">
+                                            <label class="form-check-label" for="pix1">PIX</label>
                                         </div>
                                         <div class="form-check disabled">
-                                          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
-                                          <label class="form-check-label" for="gridRadios3">
-                                            Cartão Crédito/Débito
-                                          </label>
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="cartao1" value="Cartão Crédito/Débito">
+                                            <label class="form-check-label" for="cartao1">Cartão Crédito/Débito</label>
                                         </div>
-                                      </div>
-                                    </fieldset>
-                                    <button type="submit" class="btn btn-primary">Fazer Pedido</button>
-                                  </form>
+                                    </div>
+                                </fieldset>
+                                <button type="submit" class="btn">Fazer Pedido</button>
                             </form>
                         </div>
                         
